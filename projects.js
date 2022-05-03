@@ -95,6 +95,6 @@ window.onload = () => {
       projectsContainer,
       "Eye Exercise",
       "Short exercise where two eyes on screen follow the mouse.",
-      null
+      "https://github.com/StevenMcCawley/EyeExercise"
   )
 };
