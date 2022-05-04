@@ -1,4 +1,4 @@
-function makeCard(projectsContainer, title, description, githubRepoLink) {
+function makeCard(projectsContainer, title, description, githubRepoLink, githubPagesLink) {
   let colDiv = document.createElement("div");
   colDiv.classList.add("col");
 
@@ -51,6 +51,10 @@ function makeCard(projectsContainer, title, description, githubRepoLink) {
   let cardBtnGroupDiv = document.createElement("div");
   cardBtnGroupDiv.classList.add("btn-group");
 
+    let newAnchorAction = document.createElement("a");
+    newAnchorAction.setAttribute("href", githubPagesLink);
+    newAnchorAction.setAttribute("target", "_blank");
+
   let actionBtn = document.createElement("button");
   actionBtn.classList.add("btn", "btn-sm", "btn-outline-secondary");
   actionBtn.setAttribute("type", "button");
@@ -59,9 +63,9 @@ function makeCard(projectsContainer, title, description, githubRepoLink) {
   actionBtn.style.borderColor = "#0d6efd";
   actionBtn.innerHTML = "See it in action";
 
-  let newAnchor = document.createElement("a");
-  newAnchor.setAttribute("href", githubRepoLink);
-  newAnchor.setAttribute("target", "_blank");
+  let newAnchorSource = document.createElement("a");
+  newAnchorSource.setAttribute("href", githubRepoLink);
+  newAnchorSource.setAttribute("target", "_blank");
 
   let sourceBtn = document.createElement("button");
   sourceBtn.classList.add("btn", "btn-sm", "btn-outline-secondary");
@@ -69,9 +73,11 @@ function makeCard(projectsContainer, title, description, githubRepoLink) {
   sourceBtn.setAttribute("href", githubRepoLink);
   sourceBtn.innerHTML = "View source code";
 
-  newAnchor.appendChild(sourceBtn);
-  cardBtnGroupDiv.appendChild(actionBtn);
-  cardBtnGroupDiv.appendChild(newAnchor);
+  newAnchorAction.appendChild(actionBtn);
+  newAnchorSource.appendChild(sourceBtn);
+  //cardBtnGroupDiv.appendChild(actionBtn);
+  cardBtnGroupDiv.appendChild(newAnchorAction)
+  cardBtnGroupDiv.appendChild(newAnchorSource);
   cardFlexDiv.appendChild(cardBtnGroupDiv);
   cardBodyDiv.appendChild(cardTextP);
   cardBodyDiv.appendChild(cardFlexDiv);
