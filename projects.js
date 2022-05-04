@@ -1,4 +1,6 @@
-function makeCard(projectsContainer, title, description, githubRepoLink, githubPagesLink) {
+var exercises = [];
+
+function makeCard(title, description, githubRepoLink, githubPagesLink) {
   let colDiv = document.createElement("div");
   colDiv.classList.add("col");
 
@@ -85,23 +87,31 @@ function makeCard(projectsContainer, title, description, githubRepoLink, githubP
   cardDiv.appendChild(cardBodyDiv);
   colDiv.appendChild(cardDiv);
 
-  projectsContainer.appendChild(colDiv);
+  exercises.push(colDiv);
+
+  //projectsContainer.appendChild(colDiv);
 }
 
 window.onload = () => {
   const projectsContainer = document.getElementById("myProjectsContainer");
-  console.log(projectsContainer);
+  // console.log(projectsContainer);
+  
   makeCard(
-    projectsContainer,
     "PacMen Exercise",
     "Short exercise that produces PacMen that bounce around the window",
     "https://github.com/StevenMcCawley/PacMenExercise",
     "https://stevenmccawley.github.io/PacMenExercise/"
   );
+  
   makeCard(
-      projectsContainer,
       "Eye Exercise",
       "Short exercise where two eyes on screen follow the mouse.",
-      "https://github.com/StevenMcCawley/EyeExercise"
+      "https://github.com/StevenMcCawley/EyeExercise",
+      "https://stevenmccawley.github.io/EyeExercise/"
   )
+
+  console.log(exercises);
+  exercises.forEach(element => {
+    projectsContainer.appendChild(element);
+  });
 };
