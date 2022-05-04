@@ -95,7 +95,8 @@ window.onload = () => {
     projectsContainer,
     "PacMen Exercise",
     "Short exercise that produces PacMen that bounce around the window",
-    "https://github.com/StevenMcCawley/PacMenExercise"
+    "https://github.com/StevenMcCawley/PacMenExercise",
+    "https://stevenmccawley.github.io/PacMenExercise/"
   );
   makeCard(
       projectsContainer,
