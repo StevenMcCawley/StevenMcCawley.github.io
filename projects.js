@@ -26,8 +26,8 @@ function makeCard(title, description, githubRepoLink, githubPagesLink) {
   newRectSVG.setAttribute("fill", "#55595c");
 
   let newTextSVG = document.createElementNS("http://www.w3.org/2000/svg", "text");
-  newTextSVG.setAttribute("x", "50%");
-  newTextSVG.setAttribute("y", "50%");
+  newTextSVG.setAttribute("x", "5%");
+  newTextSVG.setAttribute("y", "90%");
   newTextSVG.setAttribute("fill", "#eceeef");
   newTextSVG.setAttribute("dy", ".3em");
   newTextSVG.innerHTML = title;
