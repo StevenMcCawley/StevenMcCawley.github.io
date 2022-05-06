@@ -110,6 +110,13 @@ window.onload = () => {
       "https://stevenmccawley.github.io/EyeExercise/"
   )
 
+  makeCard(
+    "Real Time Bus Tracker",
+    "Exercise to track busses around MIT in real time",
+    "https://github.com/StevenMcCawley/Real-Time-Bus-Tracker",
+    "https://stevenmccawley.github.io/Real-Time-Bus-Tracker/"
+  )
+
   console.log(exercises);
   exercises.forEach(element => {
     projectsContainer.appendChild(element);
