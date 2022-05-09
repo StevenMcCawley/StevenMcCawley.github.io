@@ -17,15 +17,24 @@ function makeCard(title, description, githubRepoLink, githubPagesLink) {
   newSVG.setAttribute("preserveAspectRatio", "xMidYMid slice");
   newSVG.setAttribute("focusable", "false");
 
-  let newTitleSVG = document.createElementNS("http://www.w3.org/2000/svg", "title");
+  let newTitleSVG = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "title"
+  );
   newTitleSVG.innerHTML = title;
 
-  let newRectSVG = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+  let newRectSVG = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "rect"
+  );
   newRectSVG.setAttribute("width", "100%");
   newRectSVG.setAttribute("height", "100%");
   newRectSVG.setAttribute("fill", "#55595c");
 
-  let newTextSVG = document.createElementNS("http://www.w3.org/2000/svg", "text");
+  let newTextSVG = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "text"
+  );
   newTextSVG.setAttribute("x", "5%");
   newTextSVG.setAttribute("y", "90%");
   newTextSVG.setAttribute("fill", "#eceeef");
@@ -53,9 +62,9 @@ function makeCard(title, description, githubRepoLink, githubPagesLink) {
   let cardBtnGroupDiv = document.createElement("div");
   cardBtnGroupDiv.classList.add("btn-group");
 
-    let newAnchorAction = document.createElement("a");
-    newAnchorAction.setAttribute("href", githubPagesLink);
-    newAnchorAction.setAttribute("target", "_blank");
+  let newAnchorAction = document.createElement("a");
+  newAnchorAction.setAttribute("href", githubPagesLink);
+  newAnchorAction.setAttribute("target", "_blank");
 
   let actionBtn = document.createElement("button");
   actionBtn.classList.add("btn", "btn-sm", "btn-outline-secondary");
@@ -78,7 +87,7 @@ function makeCard(title, description, githubRepoLink, githubPagesLink) {
   newAnchorAction.appendChild(actionBtn);
   newAnchorSource.appendChild(sourceBtn);
   //cardBtnGroupDiv.appendChild(actionBtn);
-  cardBtnGroupDiv.appendChild(newAnchorAction)
+  cardBtnGroupDiv.appendChild(newAnchorAction);
   cardBtnGroupDiv.appendChild(newAnchorSource);
   cardFlexDiv.appendChild(cardBtnGroupDiv);
   cardBodyDiv.appendChild(cardTextP);
@@ -95,30 +104,30 @@ function makeCard(title, description, githubRepoLink, githubPagesLink) {
 window.onload = () => {
   const projectsContainer = document.getElementById("myProjectsContainer");
   // console.log(projectsContainer);
-  
+
   makeCard(
     "PacMen Exercise",
     "Short exercise that produces PacMen that bounce around the window",
     "https://github.com/StevenMcCawley/PacMenExercise",
     "https://stevenmccawley.github.io/PacMenExercise/"
   );
-  
+
   makeCard(
-      "Eye Exercise",
-      "Short exercise where two eyes on screen follow the mouse.",
-      "https://github.com/StevenMcCawley/EyeExercise",
-      "https://stevenmccawley.github.io/EyeExercise/"
-  )
+    "Eye Exercise",
+    "Short exercise where two eyes on screen follow the mouse.",
+    "https://github.com/StevenMcCawley/EyeExercise",
+    "https://stevenmccawley.github.io/EyeExercise/"
+  );
 
   makeCard(
     "Real Time Bus Tracker",
     "Exercise to track busses around MIT in real time",
     "https://github.com/StevenMcCawley/Real-Time-Bus-Tracker",
     "https://stevenmccawley.github.io/Real-Time-Bus-Tracker/"
-  )
+  );
 
   console.log(exercises);
-  exercises.forEach(element => {
+  exercises.forEach((element) => {
     projectsContainer.appendChild(element);
   });
 };
