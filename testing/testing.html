@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="testing.css" />
+</head>
+
+<body>
+  <div>
+    <img class="img-fluid" src="Dream_TradingCard.jpg" alt="placeholder image" />
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar navbar-expand-md navbar-dark bg-dark shadow">
+    <!-- container for components in navabr -->
+    <div class="container">
+      <!-- "logo" -->
+      <a href="#" class="navbar-brand text-wrap">
+        <strong>StevenMcCawley.github.io</strong>
+      </a>
+      <!-- hamburger -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navOptions"
+        aria-controls="navOptions" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-option"></span>
+      </button>
+      <!-- nav options -->
+      <div class="collapse navbar-collapse" id="navOptions">
+        <div class="navbar-nav">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#showcase" class="nav-link">Showcase </a>
+          <a href="#resume" class="nav-link">Resume</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="bg-light">
+    <section class="py-3" id="about">
+      <div class="container text-center">
+        <h2 class="display-5 fw-bold">About me</h2>
+        <p class="lead mx-auto col-md-6">
+          I am a recent Computer Science graduate interested in full-stack
+          development. Currently, I am enrolled in MIT's Professional
+          Certificate in Coding: Full Stack Development with MERN coding boot
+          camp. I am looking to work in web development as part of a
+          goal-oriented team.
+        </p>
+      </div>
+    </section>
+    <section class="bg-dark bg-opacity-10 py-3" id="showcase">
+      <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-3">Showcase</h2>
+        <div
+          class="row text-start justify-content-center row-cols-1 row-cols-sm-2 justify-content-md-between row-cols-md-3 g-3"
+          id="cardContainer">
+          <!-- Card start -->
+          <div class="card col myShowcaseCard blankCard px-0 shadow" style="width: 18rem">
+            <img src="" class="card-img-top" alt="placeholder" />
+            <div class="card-body">
+              <h5 class="card-title placeholder-wave"><span class="placeholder col-6"></span></h5>
+              <p class="card-text placeholder-wave">
+                <span class="placeholder col-7"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-6"></span>
+                <span class="placeholder col-8"></span>
+              </p>
+              <div class="btn-group" role="group" aria-label="Card button group">
+                <a href="" target="_blank" class="btn btn-primary disabled placeholder-wave"><span><svg
+                      xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white"
+                      class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                      <path
+                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg></span></a>
+                <a href="" target="_blank" class="btn btn-outline-secondary disabled placeholder-wave"><span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                      class="bi bi-code" viewBox="0 0 16 16">
+                      <path
+                        d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z" />
+                    </svg> </span></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card start -->
+          <div class="card col myShowcaseCard blankCard px-0 shadow" style="width: 18rem">
+            <img src="" class="card-img-top" alt="placeholder" />
+            <div class="card-body">
+              <h5 class="card-title placeholder-wave"><span class="placeholder col-6"></span></h5>
+              <p class="card-text placeholder-wave">
+                <span class="placeholder col-7"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-6"></span>
+                <span class="placeholder col-8"></span>
+              </p>
+              <div class="btn-group" role="group" aria-label="Card button group">
+                <a href="" target="_blank" class="btn btn-primary disabled placeholder-wave"><span><svg
+                      xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white"
+                      class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                      <path
+                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg></span></a>
+                <a href="" target="_blank" class="btn btn-outline-secondary disabled placeholder-wave"><span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                      class="bi bi-code" viewBox="0 0 16 16">
+                      <path
+                        d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z" />
+                    </svg> </span></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card start -->
+          <div class="card col myShowcaseCard blankCard px-0 shadow" style="width: 18rem">
+            <img src="" class="card-img-top" alt="placeholder" />
+            <div class="card-body">
+              <h5 class="card-title placeholder-wave"><span class="placeholder col-6"></span></h5>
+              <p class="card-text placeholder-wave">
+                <span class="placeholder col-7"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-6"></span>
+                <span class="placeholder col-8"></span>
+              </p>
+              <div class="btn-group" role="group" aria-label="Card button group">
+                <a href="" target="_blank" class="btn btn-primary disabled placeholder-wave"><span><svg
+                      xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white"
+                      class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                      <path
+                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg></span></a>
+                <a href="" target="_blank" class="btn btn-outline-secondary disabled placeholder-wave"><span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                      class="bi bi-code" viewBox="0 0 16 16">
+                      <path
+                        d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z" />
+                    </svg> </span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-3 pb-5" id="resume">
+      <div class="container text-center">
+        <h2 class="display-5 fw-bold">Resume</h2>
+        <div class="text-start">
+          <a href="resumelink" style="text-decoration: none" class="btn btn-primary border-start border-primary mb-3"
+            target="_blank">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-download"
+                viewBox="0 0 16 16">
+                <path
+                  d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                <path
+                  d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div class="border-start border-3 border-primary p-5 bg-white text-start shadow">
+          <section class="text-center">
+            <b class="fs-4">
+              Steven McCawley
+            </b>
+            <br>
+            <b class="fw-light">
+              San Antonio, TX
+            </b>
+            <br />
+            <div class="row fw-light">
+              <div class="col">(210) 990-6765</div>
+              <div class="col">steven.mccawley@yahoo.com</div>
+              <div class="col">linkedin.com/in/stevenmccawley</div>
+            </div>
+            <br />
+            <br>
+          </section>
+          <section>
+            <b>
+              Summary
+            </b>
+            <hr class="mt-1" />
+            <p>
+              Detail-oriented recent Computer Science graduate interested in
+              the Software Engineering and Web Development process. Interested
+              in learning new technologies and working as part of a
+              goal-oriented team. Experience with web scraping and REST APIs
+              using JavaScript to increase functionality for an application.
+              Currently enrolled in a coding boot camp with MIT and seeking a
+              career in a Software Engineering related field.
+            </p>
+          </section>
+          <section>
+            <b>
+              Education
+            </b>
+            <hr class="mt-1" />
+            <div>
+              <p>
+              <div>
+                <div class="row d-flex row-cols-1 row-cols-lg-2">
+                  <div class="col col-lg-8"><b>Professional Certificate in Coding: Full Stack Development with MERN</b>
+                  </div>
+                  <div class="col col-lg-4">Expected: December 2022</div>
+                  <div class="col col-lg-8">Massachusetts Institute of Technology</div>
+                </div>
+                <br>
+                <div class="row row-cols-1 row-cols-lg-2">
+                  <div class="col col-lg-8"><b>Bachelor of Science in Computer Science</b></div>
+                  <div class="col col-lg-4">December 2020</div>
+                  <div class="col col-lg-8">The University of Texas at Dallas</div>
+                  <div class="col col-lg-4">GPA: <b>3.2</b></div>
+                </div>
+              </div>
+              </p>
+            </div>
+          </section>
+          <section>
+            <b>
+              Technical Skills
+            </b>
+            <hr class="mt-1" />
+            <p>
+            <div class="row row-cols-1 row-cols-md-2">
+              <div class="fst-italic col col-md-2">Languages</div>
+              <div class="col col-md-10">Javascript, Java, SQL, C#, C, C++</div>
+              <br class="d-md-none">
+              <br class="d-md-none">
+              <div class="fst-italic col col-md-2">Software</div>
+              <div class="col col-md-10">Visual Studio Code, Github, MS Graph Explorer</div>
+              <br class="d-md-none">
+              <br class="d-md-none">
+              <div class="fst-italic col col-md-2">Other</div>
+              <div class="col col-md-10">HTML, CSS, REST APIs, automated unit testing, Agile, problem analysis,
+                communication/teamwork, customer service
+              </div>
+            </div>
+            </p>
+          </section>
+          <section>
+            <b>
+              Capstone Project
+            </b>
+            <hr class="mt-1" />
+            <p>
+            <div class="row row-cols-2">
+              <div class="col-8"><b>Amna</b></div>
+              <div class="col-4">Fall 2020</div>
+            </div>
+            An application to integrate various productivity applications
+            <ul>
+              <li>Worked for a small start-up company as part of the integrations team to integrate platforms such as
+                Google and Outlook calendars and mail as well as Microsoft To Do and ToDoist</li>
+              <li>Built code to make elements of websites draggable into the Amna application</li>
+              <li>Built code utilizing REST APIs to consolidate to-do lists from various platforms</li>
+              <li>Created and used automated test cases to test functionality of methods</li>
+            </ul>
+            </p>
+          </section>
+          <section>
+            <b>
+              Relevant Coursework
+            </b>
+            <hr class="mt-1" />
+            <div class="row row-cols-1 row-cols-md-2 ">
+              <div class="col">Embedded Computer Systems</div>
+              <div class="col">Computer Science Project</div>
+              <div class="col">Discrete Math for Computing I & II</div>
+              <div class="col">Automata Theory</div>
+              <div class="col">Computer Architecture</div>
+              <div class="col">Software Engineering</div>
+              <div class="col">Advanced Algorithm Design & Analysis</div>
+              <div class="col">Database Systems</div>
+              <div class="col">Artificial Intelligence</div>
+              <div class="col">Professional Responsibility in CS & SE</div>
+              <div class="col">Digital Logic & Computer Design</div>
+              <div class="col">Object Oriented Design</div>
+              <div class="col">Organization of Programming Languages</div>
+              <div class="col">Social Issues and Ethics in Science & Technology</div>
+            </div>
+            <br>
+          </section>
+          <section>
+            <b>Work Experience</b>
+            <hr class="mt-1" />
+            <div class="row row-cols-1 row-cols-lg-4">
+              <div class="col col-lg-5"><b>Cashier</b>, Chick-fil-a</div>
+              <div class="col col-lg-2">Selma, TX</div>
+              <div class="col col-lg-2">Full Time</div>
+              <div class="col col-lg-3">Jun 2016 - Sep 2018</div>
+            </div>
+            Managed the lobby on a daily basis to maintain an efficient and clean work environment.
+            <br>
+            <br>
+            <div class="row row-cols-1 row-cols-lg-4">
+              <div class="col col-lg-5"><b>Customer Service Advisor</b>, Jiffy Lube</div>
+              <div class="col col-lg-2">San Antonio, TX</div>
+              <div class="col col-lg-2">Full Time</div>
+              <div class="col col-lg-3">Jun 2015 - Jan 2016</div>
+            </div>
+            Greeted customers and serviced their vehicles in a team-centered environment to ensure customer
+            satisfaction.
+          </section>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="py-3 bg-dark bg-opacity-10" id="contact">
+      <div class="container text-end">
+        <h2 class="display-5 fw-bold mb-3 text-center">Contact</h2>
+        <!-- Information gather -->
+        <form action="mailto:steven.mccawley@yahoo.com">
+          <div class="row row-cols-1 row-cols-md-2 text-start">
+            <div class="mb-3 col">
+              <label for="contactEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+            </div>
+            <div class="mb-3 col">
+              <label for="contactPhoneNumber" class="form-label">Phone number</label>
+              <input type="tel" class="form-control" id="contactPhoneNumber" placeholder="+1 (123) 456-7890"
+                pattern="^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$">
+            </div>
+          </div>
+          <!-- Contact content -->
+          <div class="mb-3 text-start">
+            <label for="contactText" class="form-label">What's up?</label>
+            <textarea class="form-control" id="contactText" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send it!</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark sticky-bottom border-top">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center py-4">
+      <div class="btn-group btn-group-sm" role="group" aria-label="Footer buttons">
+        <a href="https://github.com/StevenMcCawley/StevenMcCawley.github.io" style="text-decoration: none"
+          class="btn btn-outline-primary" target="_blank">
+          Visit GitHub repo for this site
+        </a>
+        <a href="#" style="text-decoration: none" class="btn btn-outline-secondary">
+          Back to top
+        </a>
+      </div>
+      <!-- links -->
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="ms-3">
+          <a href="https://www.linkedin.com/in/stevenmccawley/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-linkedin"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+            </svg>
+          </a>
+        </div>
+        <div class="ms-3">
+          <a href="https://github.com/StevenMcCawley" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-github"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!-- Custom JS -->
+  <script src="testing.js"></script>
+</body>
+
+</html>
