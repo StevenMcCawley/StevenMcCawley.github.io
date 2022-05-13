@@ -36,9 +36,9 @@ function swapToLight() {
 
   //change contact
   contact.classList.replace("bg-light", "bg-dark");
-  for (let i = 0; i < inputs.length; i++) {
+  for (let i = 0; i < inputs.length; i++)
     inputs[i].classList.replace("text-light", "text-dark");
-  }
+
   contact
     .getElementsByTagName("textArea")[0]
     .classList.replace("text-light", "text-dark");
@@ -76,9 +76,9 @@ function swapToDark() {
 
   //change contact
   contact.classList.replace("bg-dark", "bg-light");
-  for (let i = 0; i < inputs.length; i++) {
+  for (let i = 0; i < inputs.length; i++)
     inputs[i].classList.replace("text-dark", "text-light");
-  }
+
   contact
     .getElementsByTagName("textArea")[0]
     .classList.replace("text-dark", "text-light");
@@ -91,7 +91,7 @@ function setPath(svg, path) {
 function lower(svg) {
   svg.style.transform = "translate(0%, 25%)";
 }
-function raise(svg) {
+function resetPosistion(svg) {
   svg.style.transform = "translate(0%, 0%)";
 }
 
@@ -115,6 +115,7 @@ toggleBtn.addEventListener("click", () => {
     swapToDark();
     setPath(toggleBtn, lightPath);
   }
+  resetPosistion(toggleBtn.getElementsByTagName("svg")[0]);
 });
 
 toggleBtn.addEventListener("mouseover", () => {
@@ -126,5 +127,5 @@ toggleBtn.addEventListener("mouseover", () => {
 toggleBtn.addEventListener("mouseout", () => {
   if (isLight) setPath(toggleBtn, darkPath);
   else setPath(toggleBtn, lightPath);
-  raise(toggleBtn.getElementsByTagName("svg")[0]);
+  resetPosistion(toggleBtn.getElementsByTagName("svg")[0]);
 });
