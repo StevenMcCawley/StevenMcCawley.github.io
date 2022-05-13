@@ -9,12 +9,13 @@ Array.from(n).forEach(element => {
     element.addEventListener("mouseover", () => {
         console.log("wow");
         element.classList.replace("border-dark", "border-primary");
-
+        element.classList.add("text-white");
         //element.classList.add("text-decoration-underline");
     })
     
     element.addEventListener("mouseout", () => {
         element.classList.replace("border-primary", "border-dark");
+        element.classList.remove("text-white");
     })
 
 });
