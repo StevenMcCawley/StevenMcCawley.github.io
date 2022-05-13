@@ -1,8 +1,13 @@
 const gitHubRepos = [
   "https://github.com/StevenMcCawley/Real-Time-Bus-Tracker",
   "https://github.com/StevenMcCawley/PacMenExercise",
+  "https://github.com/StevenMcCawley/Eyes-That-Follow",
 ];
-const descriptions = ["Small exercise to track busses near MIT in real time", "Creates PacMen dynamically on the page that bounce against the edge of the window"];
+const descriptions = [
+  "Small exercise to track busses near MIT in real time",
+  "Creates PacMen dynamically on the page that bounce against the edge of the window",
+  "A short exercise with eyes that track mouse movement on screen",
+];
 
 function populateCards() {
   /* Get card objects into a list */
