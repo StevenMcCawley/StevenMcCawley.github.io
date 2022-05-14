@@ -1,23 +1,19 @@
-let navbar = document.getElementById("navOptions");
+//let navbar = document.getElementById("navOptions");
 
-let n = navbar.getElementsByClassName("nav-link");
-console.log(n);
-console.log(Array.from(n));
+// let n = document
+//   .getElementById("navOptions")
+//   .getElementsByClassName("nav-link");
 
-Array.from(n).forEach(element => {
-    console.log(element);
-    element.addEventListener("mouseover", () => {
-        console.log("wow");
-        element.classList.replace("border-dark", "border-primary");
-        element.classList.add("text-white");
-        //element.classList.add("text-decoration-underline");
-    })
-    
-    element.addEventListener("mouseout", () => {
-        element.classList.replace("border-primary", "border-dark");
-        element.classList.remove("text-white");
-    })
+Array.from(
+  document.getElementById("navOptions").getElementsByClassName("nav-link")
+).forEach((element) => {
+  element.addEventListener("mouseover", () => {
+    element.classList.replace("border-dark", "border-primary");
+    element.classList.add("text-white");
+  });
 
+  element.addEventListener("mouseout", () => {
+    element.classList.replace("border-primary", "border-dark");
+    element.classList.remove("text-white");
+  });
 });
-
-//console.log(Array.from(options));
