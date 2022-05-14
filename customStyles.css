@@ -2,6 +2,14 @@ container a {
   text-decoration: none;
 }
 
+.form-control:focus {
+  box-shadow: none;
+}
+
+::selection {
+  background: #0d6efd;
+}
+
 /* Hide scrollbar */
 ::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
