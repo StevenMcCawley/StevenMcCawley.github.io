@@ -1,11 +1,12 @@
+const main = document.getElementById("main");
+const showcase = document.getElementById("showcase");
+const cards = showcase.getElementsByClassName("card");
+const resumeSection = document.getElementById("resume");
+const resumeActual = resumeSection.getElementsByClassName("shadow")[0];
+const contact = document.getElementById("contact");
+const inputs = contact.getElementsByTagName("input");
+
 function swapToLight() {
-  const main = document.getElementById("main");
-  const showcase = document.getElementById("showcase");
-  const cards = showcase.getElementsByClassName("card");
-  const resumeSection = document.getElementById("resume");
-  const resumeActual = resumeSection.getElementsByClassName("shadow")[0];
-  const contact = document.getElementById("contact");
-  const inputs = contact.getElementsByTagName("input");
 
   // change main
   main.classList.replace("bg-black", "bg-light");
@@ -39,14 +40,6 @@ function swapToLight() {
 }
 
 function swapToDark() {
-  const main = document.getElementById("main");
-  const showcase = document.getElementById("showcase");
-  const cards = showcase.getElementsByClassName("card");
-  const resumeSection = document.getElementById("resume");
-  const resumeActual = resumeSection.getElementsByClassName("shadow")[0];
-  const contact = document.getElementById("contact");
-  const inputs = contact.getElementsByTagName("input");
-
   // change main
   main.classList.replace("bg-light", "bg-black");
   main.classList.replace("text-dark", "text-light");
@@ -78,10 +71,6 @@ function swapToDark() {
     .classList.replace("text-dark", "text-light");
 }
 
-function setPath(svg, path) {
-  svg.getElementsByTagName("path")[0].setAttribute("d", path);
-}
-
 function lower(svg) {
   svg.style.transform = "translate(0%, 25%)";
 }
@@ -91,35 +80,44 @@ function resetPosistion(svg) {
 
 var isLight = false;
 const toggleBtn = document.getElementById("toggle-theme");
-const darkPath =
-  "M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z";
-const lightPath =
+
+let darkModePath =
   "M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z";
-const lightSetPath =
+let darkModePathDown =
   "M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm8 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zm-13.5.5a.5.5 0 0 0 0-1h-2a.5.5 0 0 0 0 1h2zm11.157-6.157a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm-9.9 2.121a.5.5 0 0 0 .707-.707L3.05 5.343a.5.5 0 1 0-.707.707l1.414 1.414zM8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4zm0 1a3 3 0 0 1 2.959 2.5H5.04A3 3 0 0 1 8 8z";
-const darkSetPath =
+let lightModePath =
+  "M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z";
+let lightModePathDown =
   "M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm8 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zm-13.5.5a.5.5 0 0 0 0-1h-2a.5.5 0 0 0 0 1h2zm11.157-6.157a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm-9.9 2.121a.5.5 0 0 0 .707-.707L3.05 5.343a.5.5 0 1 0-.707.707l1.414 1.414zM8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4z";
+
+function draw(path) {
+  toggleBtn
+    .getElementsByTagName("svg")[0]
+    .getElementsByTagName("path")[0]
+    .setAttribute("d", path);
+}
 
 toggleBtn.addEventListener("click", () => {
   isLight = !isLight;
   if (isLight) {
     swapToLight();
-    setPath(toggleBtn, darkPath);
+    draw(lightModePath);
   } else {
     swapToDark();
-    setPath(toggleBtn, lightPath);
+    draw(darkModePath);
   }
+  
   resetPosistion(toggleBtn.getElementsByTagName("svg")[0]);
 });
 
 toggleBtn.addEventListener("mouseover", () => {
-  if (isLight) setPath(toggleBtn, darkSetPath);
-  else setPath(toggleBtn, lightSetPath);
+  if (isLight) draw(lightModePathDown);
+  else draw (darkModePathDown);
   lower(toggleBtn.getElementsByTagName("svg")[0]);
 });
 
 toggleBtn.addEventListener("mouseout", () => {
-  if (isLight) setPath(toggleBtn, darkPath);
-  else setPath(toggleBtn, lightPath);
+  if (isLight) draw(lightModePath);
+  else draw(darkModePath);
   resetPosistion(toggleBtn.getElementsByTagName("svg")[0]);
 });
