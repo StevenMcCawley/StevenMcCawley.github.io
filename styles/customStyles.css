@@ -5,12 +5,17 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+:root {
+  /* --primary: rgb(41, 169, 134); */
+  --primary: rgb(13, 110, 253);
+}
+
 .container a {
   text-decoration: none;
 }
 
 .biNavLink:hover {
-  fill: #0d6efd;
+  fill: var(--primary);
 }
 
 .unselectable {
@@ -27,7 +32,7 @@
 }
 
 ::selection {
-  background: #0d6efd;
+  background: var(--primary);
 }
 
 /* Hide scrollbar */
@@ -47,9 +52,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0d6efd;
+  background: var(--primary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0d6efd;
+  background: var(--primary);
 }

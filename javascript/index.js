@@ -1,13 +1,21 @@
-Array.from(
-  document.getElementById("navbar-nav-buttons").getElementsByClassName("nav-link")
-).forEach((element) => {
-  element.addEventListener("mouseover", () => {
-    element.classList.replace("border-dark", "border-primary");
-    element.classList.add("text-white");
+const main = document.querySelector("#main");
+const [about, showcase, resume, contact] = [
+  ...document.querySelectorAll("#main > section"),
+];
+const cards = showcase.querySelectorAll(".card");
+const resumeActual = resume.querySelector("#actualResume");
+const inputs = contact.querySelectorAll("input");
+
+for (let e of [
+  ...document.querySelectorAll("#navbar-nav-buttons > .nav-link"),
+]) {
+  e.addEventListener("mouseover", () => {
+    e.classList.replace("border-dark", "border-primary");
+    e.classList.add("text-white");
   });
 
-  element.addEventListener("mouseout", () => {
-    element.classList.replace("border-primary", "border-dark");
-    element.classList.remove("text-white");
+  e.addEventListener("mouseout", () => {
+    e.classList.replace("border-primary", "border-dark");
+    e.classList.remove("text-white");
   });
-});
+}

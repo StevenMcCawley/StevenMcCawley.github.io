@@ -9,66 +9,49 @@ const descriptions = [
   "A short exercise with eyes that track mouse movement on screen",
 ];
 
-function populateCards() {
-  var cards = document.getElementsByClassName("myShowcaseCard");
+const populateCards = () => {
   for (
     let i = 0;
     i < cards.length && i < gitHubRepos.length && i < descriptions.length;
     i++
   ) {
-    let card = cards[i];
-    let repoLink = gitHubRepos[i];
+    const card = cards[i];
+    const repoLink = gitHubRepos[i];
+    const image = card.querySelector(".card-img-top");
+    const body = card.querySelector(".card-body");
+    const projectTitle = `${repoLink.substring(repoLink.lastIndexOf("/") + 1)}`;
+    const title = body.querySelector(".card-title");
+    // const title = body.querySelector(".carb-body > .card-title");
+    const text = body.querySelector(".card-text");
+    // const text = body.querySelector(".carb-body > .card-text");
+    const btnGroup = card.querySelectorAll(".btn");
 
-    let image = card.firstElementChild;
-    let body = card.lastElementChild;
+    image.src = `https://raw.githubusercontent.com/StevenMcCawley/${projectTitle}/main/thumbnail.png`;
+    image.alt = `${projectTitle}-Thumbnail`;
 
-    image.src = `https://raw.githubusercontent.com/${repoLink.substring(
-      repoLink.indexOf("Steven")
-    )}/main/thumbnail.png`;
-
-    image.alt = `${repoLink.substring(
-      repoLink.lastIndexOf("McCawley") + 9
-    )}-Thumbnail`;
-
-    let title = body.childNodes[1];
     title.classList.remove("placeholder-wave");
-    title.innerHTML = `${repoLink
-      .substring(repoLink.lastIndexOf("McCawley") + 9)
-      .replace(/-/g, " ")}`;
+    title.innerHTML = projectTitle.replace(/-/g, " ");
 
-    let text = body.childNodes[3];
     text.classList.remove("placeholder-wave");
-    let first = text.firstElementChild;
-    while (first) {
-      first.remove();
-      first = text.firstElementChild;
-    }
+    for (let p of text.querySelectorAll(".placeholder")) p.remove();
     text.innerHTML = descriptions[i];
 
-    let actionButton = body.childNodes[5].firstElementChild;
-    let repoButton = body.childNodes[5].lastElementChild;
-
-    actionButton.href = `https://stevenmccawley.github.io/${repoLink.substring(
-      repoLink.lastIndexOf("McCawley") + 9
-    )}/`;
-    actionButton.classList.remove("placeholder-wave");
-    actionButton.classList.remove("disabled");
-
-    repoButton.href = repoLink;
-    repoButton.classList.remove("placeholder-wave");
-    repoButton.classList.remove("disabled");
+    for (let btn of btnGroup)
+      btn.classList.remove("placeholder-wave", "disabled");
+    btnGroup[0].href = `https://stevenmccawley.github.io/${projectTitle}/`;
+    btnGroup[1].href = repoLink;
 
     card.classList.remove("blankCard");
   }
-}
+};
 
-function removeEmptyCards() {
+const removeEmptyCards = () => {
   let blankCards = document.getElementsByClassName("blankCard");
   if (blankCards.length <= 0) return;
 
   let len = blankCards.length;
   for (let i = 0; i < len; i++) blankCards[0].remove();
-}
+};
 
 window.onload = () => {
   populateCards();
